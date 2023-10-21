@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _erratoi - converts a string to an integer
- * @s: string to be converted
- * Return: 0 if no numbers in string, converted number otherwise
- *       -1 on error
+ * _erratoi - converts string to integer
+ * @s: string to converted
+ * Return: 0 if no numbers string, converted otherwise
+ *-1 on error
  */
 int _erratoi(char *s)
 {
@@ -12,7 +12,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++;  /* TODO: why does this make main return 255? */
+		s++;
 	for (i = 0;  s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -29,11 +29,11 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - prints an error message
- * @info: parameter return info struct
- * @estr: string containing specified error type
- * Return: 0 if no numbers in string, converted number otherwise
- *        -1 on error
+ * print_error - prints error mssg
+ * @info: parameter info struct
+ * @estr: string containing error type
+ * Return: 0 if no numbers  string, converted otherwise
+ * -1 on error
  */
 void print_error(info_t *info, char *estr)
 {
@@ -47,9 +47,9 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
- * @input: the input
- * @fd: filedescriptor to write to
+ * print_d - function prints decimal number
+ * @input: input
+ * @fd: filedescriptor
  *
  * Return: number of characters printed
  */
@@ -86,12 +86,12 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa
- * @num: number
- * @base: base
- * @flags: argument flags
+ * convert_number - function, a clone of itoa
+ * @num: a number
+ * @base: the base
+ * @flags: the argument flags
  *
- * Return: string
+ * Return: the string
  */
 char *convert_number(long int num, int base, int flags)
 {
@@ -123,9 +123,9 @@ char *convert_number(long int num, int base, int flags)
 
 /**
  * remove_comments - function replaces first instance of '#' with '\0'
- * @buf: address of the string to modify
+ * @buf: address of string to be modified
  *
- * Return: Always 0;
+ * Return: 0;
  */
 void remove_comments(char *buf)
 {
